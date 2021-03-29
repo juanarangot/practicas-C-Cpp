@@ -1,10 +1,5 @@
 #include <stdio.h>
-#include <math.h>
-
-int cuadrado(int);
-int cubo(int);
-int par_impar(int);
-int positivo_negativo(int);
+#include "operaciones.h"
 
 int main(void)
 {
@@ -21,7 +16,6 @@ int main(void)
     return 0;
 }
 
-
 int cuadrado(int x)
 {
     return x * x;
@@ -32,13 +26,14 @@ int cubo(int x)
     return x * x * x;
 }
 
-int par_impar(int x)
+// las siguientes funciones se definen como 'void' puesto que no retornan ningun valor
+void par_impar(int x)
 {
     // evalua el valor y determina el resultado que se mostrara por pantalla
     printf("\nEl numero %d es %s\n", x, (x % 2 == 0) ? "PAR" : "IMPAR");
 }
 
-int positivo_negativo(int x)
+void positivo_negativo(int x)
 {
     // evalua el valor y determina el resultado que se mostrara por pantalla
     printf("\nEl numero %d es %s\n", x, (x >= 0) ? "POSITIVO" : "NEGATIVO");

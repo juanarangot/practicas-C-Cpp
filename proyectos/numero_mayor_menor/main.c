@@ -33,4 +33,4 @@ int main(void)
 // funciones previas para ser usadas en el programa
 
 // Para fusionar y enlazar los archivos en un mismo ejecutable, se usa el comando 'cc'
-// de la siguiente forma: cc archivo.c archivo2.c -o ejecutable.exe (y se genera un ejecutable con ambos archivos)
+// de la siguiente forma: 'cc archivo.c archivo2.c -o ejecutable.exe' (y se genera un ejecutable con ambos archivos)
