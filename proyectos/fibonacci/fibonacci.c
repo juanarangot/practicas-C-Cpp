@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int fibonacci(int);
+void fibonacci(int);
 
 int main(void)
 {
@@ -10,13 +10,14 @@ int main(void)
     return 0;
 }
 
-int fibonacci(int limit)
-{
-    int i, a, b, c = 0;
-    for (i = 1; i <= limit; i++)
+void fibonacci(int n){    
+    static int n1=0,n2=1,n3;    
+    if(n>0)
     {
-        c = i / (1 - i - (i * i));
-
-        printf("\nNumero %d", c);
-    }
+        n3 = n1 + n2;    
+        n1 = n2;    
+        n2 = n3;    
+        printf("Numero: %d \n",n3);    
+        fibonacci(n-1);    
+    }   
 }
